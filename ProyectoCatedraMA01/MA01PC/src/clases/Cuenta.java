@@ -5,6 +5,10 @@
  */
 package clases;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import utiles.Nombre;
 import utiles.Rut;
 
@@ -48,7 +52,35 @@ public class Cuenta {
         this.numCuenta = Long.parseLong(parts[2]);
         this.cliente = new Nombre(parts[3]);
         this.saldo = Double.parseDouble(parts[4]);
-        this.estado = new Estado(parts[5]);
+        if (parts[5].equals("ACTIVA"))
+        {
+            this.estado = Estado.ACTIVA;
+        }
+        else if(parts[5].equals("INCTIVA"))
+        {
+            this.estado = Estado.INACTIVA;
+        }
+        else
+        {
+            this.estado = Estado.NULO;
+        }
+   }
+   
+   public int SaveCuenta(String FilePath)
+   {
+        File file = new File(FilePath);
+        FileWriter writer;
+        try {
+            writer = new FileWriter(file, true);
+            PrintWriter printer = new PrintWriter(writer);
+            printer.append(this.toString());
+            printer.close();
+            return 0;
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return 1;
+        }
    }
 
     @Override

@@ -7,9 +7,12 @@ package clases;
 
 /**
  *
- * @author 172493726
+ * @author mayor
  */
-public class Estado {
-    public Estado(String e)
-    {}
+
+
+public enum Estado{
+    ACTIVA, INACTIVA, NULO
+    
 }
+

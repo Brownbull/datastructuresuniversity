@@ -25,11 +25,19 @@ public class MA01PC {
         System.out.println("Hola Mundo!");
         Cuenta C = new Cuenta();
         System.out.println("Nombre = " + C.getNomBanco());
-        Cuenta B = new Cuenta("Santander ql,17249372-6,123456789,el gil qlo,100, muerto");
+        Cuenta B = new Cuenta("Santander ql,17249372-6,123456789,el gil qlo,100,INACTIVA");
         System.out.println(B.toString());
         
-        
-        File file = new File("DB_MA01PC.txt");
+        int RC = B.SaveCuenta("DB_MA01PC.txt");
+        if (RC == 0)
+        {
+            System.out.println("Save OK");
+        }
+        else
+        {
+            System.out.println("Unable To Save");
+        }
+       /* File file = new File("DB_MA01PC.txt");
         FileWriter writer;
         try {
             writer = new FileWriter(file, true);
@@ -39,6 +47,6 @@ public class MA01PC {
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        }
+        }*/
     } // end of  public static void main(String[] args)
 } // end of public class MA01PC
