@@ -1,0 +1,11 @@
+clase cuenta
+# contructores
+cuenta()
+cuenta(string)
+cuenta(cuenta e)
+
+# set and get for all attributes
+set xxx
+get xxx
+toString()
+toSave(file)
