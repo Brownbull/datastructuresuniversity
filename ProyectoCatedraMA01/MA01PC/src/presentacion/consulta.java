@@ -5,6 +5,11 @@
  */
 package presentacion;
 
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author mayor
@@ -16,6 +21,9 @@ public class consulta extends javax.swing.JFrame {
      */
     public consulta() {
         initComponents();
+        this.setSize(500,350);
+        this.setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -27,27 +35,70 @@ public class consulta extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        btnMostrar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtCuentas = new javax.swing.JTextArea();
+        btnExit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jButton1.setText("jButton1");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(30, 50, 73, 23);
+        btnMostrar.setText("Mostrar");
+        btnMostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnMostrar);
+        btnMostrar.setBounds(30, 50, 69, 23);
 
-        jLabel1.setText("Consulta Cuentas");
+        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("CONSULTA CUENTAS");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 390, 30);
+        jLabel1.setBounds(0, 0, 500, 30);
 
-        jTextField1.setText("jTextField1");
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(40, 110, 300, 120);
+        txtCuentas.setColumns(20);
+        txtCuentas.setRows(5);
+        jScrollPane1.setViewportView(txtCuentas);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(20, 100, 450, 160);
+
+        btnExit.setText("Exit");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnExit);
+        btnExit.setBounds(410, 270, 51, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarActionPerformed
+        // TODO add your handling code here:
+        String linea;
+        try{
+            FileReader f = new FileReader("DB_MA01PC.txt");
+            Scanner s = new Scanner(f);
+            while(s.hasNextLine()){
+                linea = s.nextLine();
+                txtCuentas.append(linea + '\n');
+            }
+            s.close();
+            f.close();
+        } catch(IOException e){
+            JOptionPane.showMessageDialog(this, " Error wn!!!!");
+        }
+    }//GEN-LAST:event_btnMostrarActionPerformed
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_btnExitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -85,8 +136,10 @@ public class consulta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnExit;
+    private javax.swing.JButton btnMostrar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea txtCuentas;
     // End of variables declaration//GEN-END:variables
 }

@@ -66,26 +66,47 @@ public class Cuenta {
         }
    }
    
-   public int SaveCuenta(String FilePath)
+   public int toSave(String FilePath)
    {
-        File file = new File(FilePath);
+        
         FileWriter writer;
         try {
-            writer = new FileWriter(file, true);
+            writer = new FileWriter(FilePath);
             PrintWriter printer = new PrintWriter(writer);
             printer.append(this.toString());
             printer.close();
+            writer.close();
             return 0;
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
             return 1;
         }
+        
    }
 
     @Override
-    public String toString() {
-        return "Cuenta{" + "nomBanco=" + nomBanco + ", rut=" + rut + ", numCuenta=" + numCuenta + ", cliente=" + cliente + ", saldo=" + saldo + ", estado=" + estado + '}';
+    public String toString(){
+        StringBuffer s = new StringBuffer();
+        s.append(nomBanco);
+        s.append(",");
+        s.append(rut.toString());
+        s.append(",");
+        s.append(Long.toString(numCuenta));
+        s.append(",");
+        s.append(cliente.toString());
+        s.append(",");
+        s.append(Double.toString(saldo));
+        s.append(",");
+        s.append(estado.toString());
+        return s.toString();
+    }
+    /*public String toString() {
+        return "Cuenta{" + "nomBanco=" + nomBanco + ", rut=" + rut + ", numCuenta=" + numCuenta + ", cliente=" + cliente + ", saldo=" + saldo + ", estado=" + estado + '}' + '\n';
+    }*/
+    
+    public String toString4Save() {
+        return nomBanco + "," + rut + "," + numCuenta + "," + cliente + "," + saldo + "," + estado + "\n";
     }
    
    

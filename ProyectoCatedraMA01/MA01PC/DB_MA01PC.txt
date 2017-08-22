@@ -1,1 +1,4 @@
-Cuenta{nomBanco=Santander ql, rut=17249372-6, numCuenta=123456789, cliente=el gil qlo, saldo=100.0, estado=clases.Estado@15db9742}Cuenta{nomBanco=Santander ql, rut=17249372-6, numCuenta=123456789, cliente=el gil qlo, saldo=100.0, estado=clases.Estado@15db9742}Cuenta{nomBanco=Santander ql, rut=17249372-6, numCuenta=123456789, cliente=el gil qlo, saldo=100.0, estado=NULO}Cuenta{nomBanco=Santander ql, rut=17249372-6, numCuenta=123456789, cliente=el gil qlo, saldo=100.0, estado=NULO}Cuenta{nomBanco=Santander ql, rut=17249372-6, numCuenta=123456789, cliente=el gil qlo, saldo=100.0, estado=ACTIVA}Cuenta{nomBanco=Santander ql, rut=17249372-6, numCuenta=123456789, cliente=el gil qlo, saldo=100.0, estado=INACTIVA}Cuenta{nomBanco=Santander ql, rut=17249372-6, numCuenta=123456789, cliente=el gil qlo, saldo=100.0, estado=NULO}Cuenta{nomBanco=Santander ql, rut=17249372-6, numCuenta=123456789, cliente=el gil qlo, saldo=100.0, estado=NULO}
+Banco Estado,13457909-9,123456789,la lol cosa,100.0,ACTIVA
+Banco Estado,13457909-9,123456789,la lol cosa,100.0,ACTIVA
+Banco Estado,13457909-9,123456789,la lol cosa,100.0,ACTIVA
+Banco Estado,13457909-9,123456789,la lol cosa,100.0,ACTIVA

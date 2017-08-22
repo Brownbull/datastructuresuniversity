@@ -26,9 +26,13 @@ public class MA01PC {
         Cuenta C = new Cuenta();
         System.out.println("Nombre = " + C.getNomBanco());
         Cuenta B = new Cuenta("Santander ql,17249372-6,123456789,el gil qlo,100,INACTIVA");
+        Cuenta D = new Cuenta("Banco Estado,13457909-9,123456789,la lol cosa,100,ACTIVA");
         System.out.println(B.toString());
         
-        int RC = B.SaveCuenta("DB_MA01PC.txt");
+        File file = new File("DB_MA01PC.txt");
+        
+        int RC = B.toSave("DB_MA01PC.txt");
+        int RC2 = D.toSave("DB_MA01PC.txt");
         if (RC == 0)
         {
             System.out.println("Save OK");
