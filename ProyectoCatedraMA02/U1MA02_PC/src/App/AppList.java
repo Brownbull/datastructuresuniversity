@@ -19,10 +19,14 @@ public class AppList {
     public static void main(String[] args) {
         // TODO code application logic here
         Lista L = new Lista();
-        L.add(5);
-        L.add("seis");
+        L.addToStart(5);
+        L.addToEnd("seis");
         System.out.println(L.toString());
-        
+        System.out.println(L.buscar(5));
+        System.out.println(L.buscar("wea"));
+        System.out.println(L.buscar("seis"));
+       // L.remove("seis");
+        System.out.println(L.toString());
     }
     
 }
