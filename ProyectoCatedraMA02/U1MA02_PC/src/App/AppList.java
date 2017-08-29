@@ -21,11 +21,17 @@ public class AppList {
         Lista L = new Lista();
         L.addToStart(5);
         L.addToEnd("seis");
+        L.addToEnd("seis1");
+        L.addToEnd(6);
+        L.addToEnd("seis3");
+        L.addToEnd(12);
         System.out.println(L.toString());
         System.out.println(L.buscar(5));
         System.out.println(L.buscar("wea"));
         System.out.println(L.buscar("seis"));
-       // L.remove("seis");
+        L.remove(5);
+        System.out.println(L.toString());
+        L.remove("seis3");
         System.out.println(L.toString());
     }
     
