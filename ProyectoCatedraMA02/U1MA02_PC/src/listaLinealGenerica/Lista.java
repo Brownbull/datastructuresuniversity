@@ -79,8 +79,13 @@ public class Lista<T> {
         if (p != null){
             lista = p.getLink();
             p = null;
+            return true;
         }
-        return true;
+        else
+        {
+            return false;
+        }
+        
     }      
     
     public boolean removelast(){
@@ -95,8 +100,8 @@ public class Lista<T> {
                 s = s.getLink();
             }
             a.setLink(null);
+            return true;
         }
-        return true;
     }
             
     public boolean remove(T e){
