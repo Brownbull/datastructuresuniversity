@@ -73,6 +73,34 @@ public class Lista<T> {
         return false;
     } // end of public boolean add(T e)
     
+    public boolean removefirst(){
+        Nodo p;
+        p = lista;
+        if (p != null){
+            lista = p.getLink();
+            p = null;
+        }
+        return true;
+    }      
+    
+    public boolean removelast(){
+        if (lista == null){
+            return false;
+        }
+        else{
+            Nodo a = lista;
+            Nodo s = lista;
+            while (s != null){
+                a = s;
+                s = s.getLink();
+            }
+            a.setLink(null);
+            s.setLink(null);
+            s = null;
+        }
+        return true;
+    }
+            
     public boolean remove(T e){
         Nodo left, right = lista;
         if (right.getInfo().equals(e)){
