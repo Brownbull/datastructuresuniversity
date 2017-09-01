@@ -90,13 +90,11 @@ public class Lista<T> {
         else{
             Nodo a = lista;
             Nodo s = lista;
-            while (s != null){
+            while (s.getLink() != null){
                 a = s;
                 s = s.getLink();
             }
             a.setLink(null);
-            s.setLink(null);
-            s = null;
         }
         return true;
     }

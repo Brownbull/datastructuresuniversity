@@ -33,6 +33,10 @@ public class AppList {
         System.out.println(L.toString());
         L.remove("seis3");
         System.out.println(L.toString());
+        L.removefirst();
+        System.out.println(L.toString());
+        L.removelast();
+        System.out.println(L.toString());
     }
     
 }
