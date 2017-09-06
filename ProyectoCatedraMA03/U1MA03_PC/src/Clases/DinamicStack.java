@@ -17,14 +17,16 @@ public class DinamicStack<T> {
     }
     
     public boolean Push(T e){
-        stack.addToEnd(e);
+        stack.addToStart(e);
         return true;
     }            
 
+    public boolean Pop(){
+        return stack.removefirst();
+    }   
+    
     @Override
     public String toString() {
         return stack.toString();
     }
-    
-
 } // end of public class DinamicStack<T>

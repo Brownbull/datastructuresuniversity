@@ -52,6 +52,9 @@ public class U1MA03_PC {
         D.Push(3);
         D.Push(4);
         System.out.println(D.toString());
+        D.Pop();
+        System.out.println(D.toString());
+        
         
         
         
