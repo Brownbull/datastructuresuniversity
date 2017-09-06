@@ -73,6 +73,21 @@ public class Lista<T> {
         return false;
     } // end of public boolean add(T e)
     
+    public int contar(){
+        Nodo p = lista;
+        int i;
+        if ( p == null){
+            return 0;
+        }
+        else{
+            for(i = 1; p.getLink() != null; i++ )
+            {
+                p = p.getLink();
+            }
+        }
+        return i;
+    } // end of public boolean add(T e)
+    
     public boolean removefirst(){
         Nodo p;
         p = lista;

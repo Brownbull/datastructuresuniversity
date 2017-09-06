@@ -52,9 +52,19 @@ public class U1MA03_PC {
         D.Push(3);
         D.Push(4);
         System.out.println(D.toString());
+        System.out.println(D.contar());
         D.Pop();
         System.out.println(D.toString());
-        
+        System.out.println(D.contar());
+        D.Pop();
+        System.out.println(D.toString());
+        System.out.println(D.contar());
+        D.Pop();
+        System.out.println(D.toString());
+        System.out.println(D.contar());
+        D.Pop();
+        System.out.println(D.toString());
+        System.out.println(D.contar());
         
         
         

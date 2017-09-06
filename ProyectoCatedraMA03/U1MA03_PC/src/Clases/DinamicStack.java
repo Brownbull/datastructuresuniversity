@@ -29,4 +29,8 @@ public class DinamicStack<T> {
     public String toString() {
         return stack.toString();
     }
+    
+    public int contar(){
+        return stack.contar();
+    }
 } // end of public class DinamicStack<T>
