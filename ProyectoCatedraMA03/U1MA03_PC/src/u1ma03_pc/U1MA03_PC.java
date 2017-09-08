@@ -5,6 +5,7 @@
  */
 package u1ma03_pc;
 
+import Clases.DinamicQueue;
 import Clases.DinamicStack;
 import Clases.StaticStack;
 
@@ -66,6 +67,14 @@ public class U1MA03_PC {
         System.out.println(D.toString());
         System.out.println(D.contar());
         
+        System.out.println("Clase Cola");
+        DinamicQueue C = new DinamicQueue();
+        C.add("un");
+        C.add("dos");
+        C.add("tres");
+        System.out.println(C.toString());
+        System.out.println(C.remove());
+        System.out.println(C.toString());
         
         
         
