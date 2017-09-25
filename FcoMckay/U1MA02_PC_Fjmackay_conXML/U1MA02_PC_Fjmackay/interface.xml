@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_141" class="java.beans.XMLDecoder">
+ <object class="listaLinealGenerica.Lista">
+  <void property="lista">
+   <object class="listaLinealGenerica.Nodo">
+    <void property="info">
+     <object class="clases.Postulante" id="Postulante0">
+      <void property="cargo">
+       <string>jefe de proyecto</string>
+      </void>
+      <void property="nombre">
+       <void property="materno">
+        <string>ortega</string>
+       </void>
+       <void property="nombres">
+        <string>francisco</string>
+       </void>
+       <void property="paterno">
+        <string>mackay</string>
+       </void>
+      </void>
+      <void property="rut">
+       <void property="dVerificador">
+        <char>7</char>
+       </void>
+       <void property="numero">
+        <int>12263920</int>
+       </void>
+      </void>
+     </object>
+    </void>
+    <void property="link">
+     <object class="listaLinealGenerica.Nodo">
+      <void property="info">
+       <object class="clases.Postulante" id="Postulante1">
+        <void property="cargo">
+         <string>gerente</string>
+        </void>
+        <void property="nombre">
+         <void property="materno">
+          <string>bustamante</string>
+         </void>
+         <void property="nombres">
+          <string>ximena</string>
+         </void>
+         <void property="paterno">
+          <string>toro</string>
+         </void>
+        </void>
+        <void property="rut">
+         <void property="dVerificador">
+          <char>8</char>
+         </void>
+         <void property="numero">
+          <int>12550326</int>
+         </void>
+        </void>
+       </object>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
