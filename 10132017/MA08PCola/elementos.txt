@@ -1,0 +1,6 @@
+12345678,Juan,Jara,M,S,1/3/1989,7
+15678900,Laura",Araya,F,C,5/7/1988,5
+13691321,Carolina",Contreras,F,S,9/12/1999,11
+9753222,Pedro",Soto,M,V,22/4/1991,4
+9876234,Diego",Bravo,M,D,17/3/1990,1
+16543123,Andrea",Rodriguez,F,S,27/1/1999,2
