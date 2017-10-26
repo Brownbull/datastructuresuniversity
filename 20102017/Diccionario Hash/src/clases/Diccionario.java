@@ -15,12 +15,14 @@ public class Diccionario<T> {
     public Diccionario(){
         tabla= new Tabla();
     }    
-    public Diccionario(int tamaño){
-        tabla= new Tabla(tamaño);
+    public Diccionario(int size){
+        tabla= new Tabla(size);
     }    
     public Diccionario(Diccionario d){
         tabla= new Tabla(d.tabla);      
-    } 
+    }
+    
+    @Override
     public String toString(){        
         return tabla.toString();
     }  
@@ -34,7 +36,7 @@ public class Diccionario<T> {
        return tabla.remove(clave);
     }  
     public boolean remove(T objeto){
-        return true;
+        return tabla.remove(objeto);
     }
     public boolean contains(String clave){
         return tabla.contains(clave);

@@ -33,22 +33,27 @@ public class AppDiccionario{
         Base<Persona> b5 = new Base<>("Lorena",p5);
         
         
-        Diccionario<Persona> d= new Diccionario<>(5);
+        Diccionario<Persona> d = new Diccionario<>(5);
         d.put(b1);
         d.put(b2);
         d.put(b3);
         d.put(b4);
         d.put(b5);
         
-        System.out.println("d : \n"+d.toString());
+        
         
         Persona pp = new Persona();
         pp = d.get("Ana");
-        System.out.println("pp : "+pp.toString());
+        System.out.println("pp : " + pp.toString());
         
-        System.out.println("Esta Luis? : "+d.contains("Luis"));
-        System.out.println("Esta Lucho? : "+d.contains("Lucho"));
+        System.out.println("Esta Luis? : " + d.contains("Luis"));
+        System.out.println("Esta Lucho? : " + d.contains("Lucho"));
        
-         System.out.println("Es vacia d: ? "+d.isEmpty());
+        System.out.println("Es vacia d: ? " + d.isEmpty());
+        System.out.println("d : \n"+ d.toString());
+        System.out.println(d.remove(b2.getInfo()));
+        System.out.println("d : \n" + d.toString());
+        System.out.println(d.contains(b1.getInfo()));
+        
      }
 }

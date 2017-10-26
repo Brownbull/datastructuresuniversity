@@ -10,11 +10,11 @@ package clases;
  * @author nina.valdivia
  */
 public class Tabla<T> {
-     private Base<T> []v;
+    private Base<T> []v;
      
     public Tabla(){
         v=new Base[10];
-        for(int i=0; i<10;i++){
+        for(int i=0; i < 10; i++){
             v[i]= new Base<>();
         }
     }    
@@ -139,9 +139,17 @@ public class Tabla<T> {
          
         }
     }
+    
     public boolean remove(T objeto){
-        return true;
+        for (Base<T> v1 : v) {
+            if (v1.getInfo().equals(objeto) == true) {
+                v1.setEstado(Estado.ELIMINADO);
+                return true;
+            }
+        }
+       return false;
     }
+    
     public boolean contains(String clave){
         int i=h(clave);
         for(int j=0; j<v.length; j++){
@@ -153,7 +161,12 @@ public class Tabla<T> {
         return false ;
     }
     public boolean contains(T objeto){
-        return true;
+        for (Base<T> v1 : v) {
+            if (v1.getInfo().equals(objeto) == true) {
+                return true;
+            }
+        }
+       return false;
     }
     public boolean isEmpty(){
         for(int j=0; j<v.length; j++){
