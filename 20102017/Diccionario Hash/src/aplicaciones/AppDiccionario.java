@@ -51,9 +51,12 @@ public class AppDiccionario{
        
         System.out.println("Es vacia d: ? " + d.isEmpty());
         System.out.println("d : \n"+ d.toString());
-        System.out.println(d.remove(b2.getInfo()));
+        System.out.println(d.remove(pp));
         System.out.println("d : \n" + d.toString());
-        System.out.println(d.contains(b1.getInfo()));
+        System.out.println(d.remove(pp));
+        System.out.println(d.remove(pp));
+        System.out.println("d : \n" + d.toString());
+        System.out.println(d.contains(pp));
         
      }
 }

@@ -42,7 +42,7 @@ public class Diccionario<T> {
         return tabla.contains(clave);
     }
     public boolean contains(T objeto){
-        return true;
+        return tabla.contains(objeto);
     }
     public boolean isEmpty(){
         return tabla.isEmpty();

@@ -152,17 +152,18 @@ public class Tabla<T> {
     
     public boolean contains(String clave){
         int i=h(clave);
-        for(int j=0; j<v.length; j++){
-            if(v[j].getEstado().equals(Estado.OCUPADO)){
-                if(v[j].getClave().compareTo(clave)==0)
+        for (Base<T> v1 : v) {
+            if (v1.getEstado().equals(Estado.OCUPADO)) {
+                if (v1.getClave().compareTo(clave) == 0) {
                     return true;
+                }
             }
         }
         return false ;
     }
     public boolean contains(T objeto){
         for (Base<T> v1 : v) {
-            if (v1.getInfo().equals(objeto) == true) {
+            if (v1.getInfo().equals(objeto) && v1.getEstado().equals(Estado.OCUPADO)) {
                 return true;
             }
         }
