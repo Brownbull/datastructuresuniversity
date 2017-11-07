@@ -1,0 +1,3 @@
+tomar clase ABB y crear un ABB con tomas las fiunciones basicas con una base que sea 
+int key;
+int info;

@@ -25,7 +25,7 @@ public class Diccionario<T> {
 
     } 
     
-    private void  enOrden(Nodo<T> p, StringBuilder s){
+    private void enOrden(Nodo<T> p, StringBuilder s){
         if (p!=null){
             enOrden(p.getIzq(),s);
             s.append(p.getDato().toString());
