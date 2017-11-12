@@ -44,10 +44,13 @@ public class Base{
         StringBuilder s = new StringBuilder(); 
         s.append("key: ");
         s.append(Integer.toString(this.getKey()));
-        s.append("info: ");
+        s.append(" info: ");
         s.append(Integer.toString(this.getInfo()));
         s.append("\n");
         return s.toString();
     }
-
+    
+    public boolean infoIs(int esto){
+        return esto == this.key;
+    }
 }

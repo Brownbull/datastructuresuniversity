@@ -20,7 +20,7 @@ public class Nodo {
         der=null;
     }
     public Nodo(Base e){
-        dato=e;
+        dato = e;
         izq=null;
         der=null;
     }
