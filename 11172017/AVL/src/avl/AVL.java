@@ -32,7 +32,7 @@ public class AVL {
         avl.insert(3);
         avl.InOrder();
         
-        System.out.println("\nins 1");
+        System.out.println("\nins 4");
         avl.insert(4);
         avl.InOrder();
 

@@ -24,7 +24,7 @@ public class AVLTree {
 
         @Override
         public String toString() {
-            return value + " h: " + h + " parent " + (parent == null ? "NULL" : parent.value) + " | ";
+            return value + " h(altura): " + h + " parent " + (parent == null ? "NULL" : parent.value) + " | ";
         }
 
         void setLeftChild(Nodo child) {
@@ -62,14 +62,16 @@ public class AVLTree {
         }
 
         if (value < t.value) {
+            // insertar por rama izquierda
             if (t.izq != null) {
                 insertar(t.izq, value);
             } else {
                 System.out.println("creando izq ..."+value);
                 t.izq = new Nodo(value, t);
             }
-
+            // verifica si se cumple AVL
             if (altura(t.izq) - altura(t.der) == 2) { //left heavier
+                // pregunta que rama rotar
                 if (value < t.der.value) {
                     System.out.println("rotacion der");
                     rotateRight(t);
@@ -78,6 +80,7 @@ public class AVLTree {
                     rotateLeftThenRight(t);
                 }
             }
+            // pregunta si se va por la rama derecha
         } else if (value > t.value) {
             if (t.der != null) {
                 insertar(t.der, value);
