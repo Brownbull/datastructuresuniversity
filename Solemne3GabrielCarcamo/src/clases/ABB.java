@@ -24,16 +24,40 @@ public class ABB {
 
     } 
     
+    
+    public String toStringDebug(){
+//        return raiz.toString();
+        StringBuilder s = new StringBuilder();
+        return enOrdenDebug(raiz, s).toString();  //Construye el StringBuilder mientras recorre en ABB enOrden
+//        return s.toString();
+
+    } 
+    
+    private StringBuilder enOrdenDebug(Nodo p, StringBuilder s){
+        if (p != null){
+            // Lee rama izq
+            s.append("left \n");
+            enOrdenDebug(p.getIzq(), s);
+            // Escribe contenido de donde esta
+            s.append("center \n");
+            s.append(p.getDato().toString());
+            // Lee rama der
+            s.append("right \n");
+            enOrdenDebug(p.getDer(), s);
+        }
+        return s;
+    }
+    
     private StringBuilder enOrden(Nodo p, StringBuilder s){
         if (p != null){
             // Lee rama izq
-            s.append("left ");
+            //s.append("left ");
             enOrden(p.getIzq(), s);
             // Escribe contenido de donde esta
-            s.append("center ");
+            //s.append("center ");
             s.append(p.getDato().toString());
             // Lee rama der
-            s.append("right ");
+            //s.append("right ");
             enOrden(p.getDer(), s);
         }
         return s;

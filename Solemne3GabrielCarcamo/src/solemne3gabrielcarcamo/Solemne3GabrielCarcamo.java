@@ -53,6 +53,7 @@ public class Solemne3GabrielCarcamo {
             d.put(new Base<Persona>(p9.getRut(), p9));
             d.put(new Base<Persona>(p10.getRut(), p10));
             
+            // listar
             System.out.println("\nNÓMINA");
             System.out.println(d.toString());
             
@@ -93,9 +94,9 @@ public class Solemne3GabrielCarcamo {
             
             // remove
             d.remove(p1.getRut().getNumero());
-            // listar
+            // listar con DEBUG
             System.out.println("\nNÓMINA sin p1:" + p1.getRut().getNumero());
-            System.out.println(d.toString());
+            System.out.println(d.toStringDebug());
             
         
     } // end of  public static void main(String[] args)
