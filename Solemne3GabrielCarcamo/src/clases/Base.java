@@ -4,53 +4,47 @@
  * and open the template in the editor.
  */
 package clases;
+import utiles.Rut;
+import utiles.*;
 /**
  * Pendiente:  K: Clave de tipo genérico.....
  * Clave: Rut
  * @author 85605410
  */
-public class Base{
-    private int key;  
-    private int info;
+public class Base <T> implements Comparable<Base<T>>{
+        private Rut key;  //key: Rut por las personas....
+        private T info;
+        
+        public Base(){
+            key=null;
+            info=null;
+        }
+        public Base(Rut key, T e ){
+              this.key= key;
+              info= e;
+        }
+    
+        public String toString(){
+            return key.toString()+","+info.toString();
+        }
 
-    public int getKey() {
+    public Rut getKey() {
         return key;
     }
 
-    public void setKey(int key) {
+    public void setClave(Rut key) {
         this.key = key;
     }
 
-    public int getInfo() {
+    public T getInfo() {
         return info;
     }
 
-    public void setInfo(int info) {
-        this.info = info;
-    }
-     
-    public Base() {
-        this.key = 0;
-        this.info = 0;
-    }
-    
-    public Base(int key, int info) {
-        this.key = key;
+    public void setInfo(T info) {
         this.info = info;
     }
     
-    @Override
-    public String toString(){
-        StringBuilder s = new StringBuilder(); 
-        s.append("key: ");
-        s.append(Integer.toString(this.getKey()));
-        s.append(" info: ");
-        s.append(Integer.toString(this.getInfo()));
-        s.append("\n");
-        return s.toString();
-    }
-    
-    public boolean infoIs(int esto){
-        return esto == this.key;
-    }
+    public int compareTo(Base<T> b){
+        return this.key.compareTo(b.getKey()); 
+    }    
 }

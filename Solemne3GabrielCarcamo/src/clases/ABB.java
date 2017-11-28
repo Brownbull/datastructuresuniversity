@@ -100,11 +100,11 @@ public class ABB {
             return false;
         }
         else{
-            if (key == p.getDato().getKey()){
+            if (key == p.getDato().getKey().getNumero()){   // NO UTILIZA DIGITO VERIFICADOR
                 return true;
             }
             else{
-                if (key < p.getDato().getKey()){
+                if (key < p.getDato().getKey().getNumero()){
                     return existe(p.getIzq(), key);
                 }
                 else{
@@ -141,7 +141,7 @@ public class ABB {
             return null;
         }
         else{
-            if (key == A.getDato().getKey()){
+            if (key == A.getDato().getKey().getNumero()){
                 if(A.getDer() == null && A.getIzq() == null){
                     return null;
                 }
@@ -151,11 +151,11 @@ public class ABB {
                 else {
                     Mayor = getMayor(A.getIzq());                    
                     A.setDato(Mayor.getDato());
-                    A.setIzq(eliminar(A.getIzq(), Mayor.getDato().getKey()));
+                    A.setIzq(eliminar(A.getIzq(), Mayor.getDato().getKey().getNumero()));
                     
                 }
             }
-            else if (key < A.getDato().getKey()){
+            else if (key < A.getDato().getKey().getNumero()){
                 A.setIzq(eliminar(A.getIzq(), key));
             }
             else{
@@ -175,11 +175,11 @@ public class ABB {
             return null;
         }
         else{
-            if (key == p.getDato().getKey()){
+            if (key == p.getDato().getKey().getNumero()){
                 return p.getDato();
             }
             else{
-                if (key < p.getDato().getKey()){
+                if (key < p.getDato().getKey().getNumero()){
                     return obtener(p.getIzq(), key);
                 }
                 else{
@@ -196,13 +196,13 @@ public class ABB {
   //          System.out.println("Creado.. " + e.toString());
         }
         else{
-            if (e.getKey() < p.getDato().getKey()){
-  //              System.out.println("\tHijo izq de " + p.getDato().getKey());
+            if (e.getKey().getNumero() < p.getDato().getKey().getNumero()){
+  //              System.out.println("\tHijo izq de " + p.getDato().getKey().getNumero());
                 p.setIzq(insertar(p.getIzq(), e));
             }
             else{
-                if (e.getKey() > p.getDato().getKey()){
-    //                System.out.println("\tHijo der de " + p.getDato().getKey());
+                if (e.getKey().getNumero() > p.getDato().getKey().getNumero()){
+    //                System.out.println("\tHijo der de " + p.getDato().getKey().getNumero());
                     p.setDer(insertar(p.getDer(), e));
                 }
                 else{
@@ -227,7 +227,7 @@ public class ABB {
         }
     }
     
-    public int sumarInfo(){
+    public int sumarKeys(){
         return sumar(raiz);
     }
     
@@ -236,7 +236,7 @@ public class ABB {
             return 0;
         }
         else{
-            return p.getDato().getInfo() + sumar(p.getIzq()) + sumar(p.getDer());
+            return p.getDato().getKey().getNumero() + sumar(p.getIzq()) + sumar(p.getDer());  
         }
     }
          

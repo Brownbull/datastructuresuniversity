@@ -26,8 +26,10 @@ public class AppABB {
         int[] keys = {10,5,3,1,0,2,4,7,6,8,9,15,13,16,11,14,12};
         int[] infos = {10,5,3,1,0,2,4,7,6,8,90,15,13,16,11,14,12};
         int i;
+		Rut raux;
         for (i = 0; i < items.length ; i++){
-            items[i] = new Base(keys[i],infos[i]);
+			raux = new Rut(keys[i]);
+            items[i] = new Base(raux,infos[i]);
         }
         // debug
 //        for (i = 0; i < 10; i++){
